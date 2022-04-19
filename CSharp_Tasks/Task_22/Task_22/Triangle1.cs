@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Task_22
 {
-    public class Triangle
+    internal class Triangle1
     {
         ///<summary>
         ///1. Write a program to print Pascal Triangle(any pattern).
@@ -26,16 +26,23 @@ namespace Task_22
         ///</summary>
         public static void Main()
         {
-            Console.WriteLine("***Triangle***\n");
-            for(int i=0;i<10;i++)
+            Console.WriteLine("1. Write a program to print Pascal Triangle(any pattern).");
+            int n;
+            Console.WriteLine("***Pascal Triangle Pattern***\n");
+            Console.WriteLine("Enter the value for n:");
+            n = Convert.ToInt32(Console.ReadLine());
+            for (int i = 0; i <= n; i++)
             {
-                for(int j=0;j<=i;j++)
+                for (int j = 0; j <= (n - i); j++)
                 {
-                    Console.Write("*"+" ");
+                    Console.Write(" ");
+                }
+                for (int k = 0; k < i; k++)
+                {
+                    Console.Write("*" + " ");
                 }
                 Console.WriteLine();
             }
         }
-        
     }
 }

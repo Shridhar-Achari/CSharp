@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace Task_22
 {
-    internal class Str_Method
+    internal class JArray1
     {
+        public static void Main()
+        {
+
+        }
     }
 }
