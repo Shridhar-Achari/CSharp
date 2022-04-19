@@ -28,18 +28,24 @@ namespace Task_22
         {
             Console.WriteLine("1. Write a program to print Pascal Triangle(any pattern).");
             int n;
+            int c = 1;
             Console.WriteLine("***Pascal Triangle Pattern***\n");
             Console.WriteLine("Enter the value for n:");
             n = Convert.ToInt32(Console.ReadLine());
-            for (int i = 0; i <= n; i++)
+            for (int i = 0; i <n; i++)
             {
                 for (int j = 0; j <= (n - i); j++)
                 {
                     Console.Write(" ");
                 }
-                for (int k = 0; k < i; k++)
+                for (int k = 0; k <=i; k++)
                 {
-                    Console.Write("*" + " ");
+                    if (k == 0 || i == 0)
+                        c = 1;
+                    else 
+                        c = c * (i - k + 1) / k;
+
+                    Console.Write("{0} ",c);
                 }
                 Console.WriteLine();
             }

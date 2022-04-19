@@ -19,34 +19,32 @@ namespace Task_22
             Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("***String Method***\n");
             Console.ForegroundColor = ConsoleColor.White;
-            string name = "John123";
-            string course = "C# Programming";
+            string name = "Shridhar";
+            string group = "MARS";
             Console.WriteLine("Name is:{0}", name);
-            Console.WriteLine("Course is:{0}", course);
+            Console.WriteLine("Course is:{0}", group);
+            //length
+            Console.WriteLine("***Length of the String***");
+            string str = "BootCamp";
+            Console.WriteLine("String is"+str);
+            int length = str.Length;
+            Console.WriteLine("Length is:" + length);
+
+            //Concatenation
+            Console.WriteLine("***Concatenating of the 2 Strings***");
+            string str1 = "DLithe";
+            Console.WriteLine("String 1 is:"+str1);
+            string str2 = "BootCamp";
+            Console.WriteLine("String 2 is:" + str2);
+            string add =string.Concat(str1, str2);
+            Console.WriteLine("Joined String is:"+add);
 
             //character array
-            char[] designation = { 'A', 'D', 'M', 'I', 'N' };
+            char[] Training = { 'B','O','O','T',' ','C','A','M','P' };
             //Pass the character array to String Class
-            String des = new String(designation);
-            Console.WriteLine("Designation passed to String class:{0}", des);
+            String train = new String(Training);
+            Console.WriteLine("Character from Training passed to String class:{0}", train);
             
-
-            //Access character array using foreach loop
-            foreach (char desig in designation)
-            {
-                Console.Write(desig); //ADMIN
-            }
-            Console.WriteLine();
-
-            //Escape Sequence characters
-            //\n-new line
-            Console.WriteLine("Welcome to C# Programming\nHave a Nice Day!!!");
-            //\t-tab space
-            Console.WriteLine("Welcome to C# Programming\tHave a Nice Day!!!");
-            //\" \'
-            Console.WriteLine("\"Welcome to C# Programming\"\n\'Have a Nice Day!!!\'");
-            // \\
-            Console.WriteLine("\\\\CSharp\\Strings");
             //Verbatim Strings
             Console.WriteLine(@"\\CSharp\Strings");
 
@@ -56,7 +54,7 @@ namespace Task_22
         /// </summary>
         public static void Str_Builder_Method()
         {
-            Console.WriteLine("3. Explore and show the working of the various methods and properties in String Builder.");
+            Console.WriteLine("\n\n3. Explore and show the working of the various methods and properties in String Builder.");
             Console.WriteLine("***String Builder***");
             StringBuilder sb = new StringBuilder("Hello");
             Console.WriteLine(sb.ToString());
@@ -71,6 +69,9 @@ namespace Task_22
             Console.WriteLine(sb.ToString());
             //Remove
             sb.Remove(32,11);
+            Console.WriteLine(sb.ToString());
+            //Insert
+            sb.Insert(5, "Very very");
             Console.WriteLine(sb.ToString());
         }
     }
