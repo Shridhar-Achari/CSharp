@@ -5,7 +5,7 @@
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <StartupObject>Task_22.Triangle1</StartupObject>
+    <StartupObject>Task_22.Strings1</StartupObject>
   </PropertyGroup>
 
 </Project>
