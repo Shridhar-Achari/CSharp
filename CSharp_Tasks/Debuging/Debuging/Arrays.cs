@@ -19,11 +19,13 @@ namespace Debuging
 
             /* Stored values into the array*/
             Console.Write("Input elements in the matrix :\n");//Missing semicolon
-            for (i = 0; i < 3; i++)
+            for (i = 0; i < 3; i++)//i<2
             {
-                for (j = 0; j < 3; j++)
+                for (j = 0; j < 3; j++)//j<3
                 {
-                    Console.Write("element - [{0},{1}] : ", i, j);
+                    Console.Write("element - [{0},{1}] : ", i, j);//Have to use 2 input so use another string formatter {1} within [] and console C should be capital
+
+
                     arr1[i,j] = Convert.ToInt32(Console.ReadLine());
                 }
             }
