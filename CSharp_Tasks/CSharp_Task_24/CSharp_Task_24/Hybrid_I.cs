@@ -13,10 +13,10 @@ namespace CSharp_Task_24
 		/// </summary>
 		internal class University
 		{
-
+			public string usn;
 			public void USN()
 			{
-				string usn;
+				
 				Console.WriteLine("(Base class)");
 				Console.WriteLine("Student USN:");
 				usn = Console.ReadLine();
@@ -26,10 +26,10 @@ namespace CSharp_Task_24
 
 		class College : University
 		{
-
+			public int lid;
+			public string cname;
 			public void Clg()
 			{
-				string cname;
 				Console.WriteLine("(Derived class)");
 				Console.WriteLine("Enter College Name:");
 				cname = Console.ReadLine();
@@ -37,7 +37,6 @@ namespace CSharp_Task_24
 
 			public void Lib()
 			{
-				int lid;
 				Console.WriteLine("Enter Library Id:");
 				lid = Convert.ToInt32(Console.ReadLine());
 			}
@@ -46,11 +45,11 @@ namespace CSharp_Task_24
 		// Inherit /derived / extends
 		class Student1 : College
 		{
+			public string sname;
 
 			// Student1 constructor
 			public void S1info()
-			{
-				string sname;
+			{ 
 				Console.WriteLine("(Constructor)");
 				Console.WriteLine("Enter Student Name");
 				sname= Console.ReadLine();
@@ -58,16 +57,19 @@ namespace CSharp_Task_24
 			public void S1display()
 			{
 				Console.WriteLine("***STUDENT DETAILS***");
+				Console.Write("Student Name:\t" + sname + "\n");
+				Console.Write("Student Usn:\t"+usn+"\n");
+				Console.Write("Student College:\t"+cname+"\n");
+				Console.Write("Library Id:\t" + lid + "\n");
 			}
 		}
 
 		class Student2 : College
 		{
-
+			public string sname;
 			// Student2 constructor
 			public void S2info()
 			{
-				string sname;
 				Console.WriteLine("(Constructor)");
 				Console.WriteLine("Enter Student Name");
 				sname = Console.ReadLine();
@@ -75,6 +77,10 @@ namespace CSharp_Task_24
 			public void S2display()
 			{
 				Console.WriteLine("***STUDENT DETAILS***");
+				Console.Write("Student Name:\t" + sname + "\n");
+				Console.Write("Student Usn:\t" + usn + "\n");
+				Console.Write("Student College:\t" + cname + "\n");
+				Console.Write("Library Id:\t" + lid + "\n");
 			}
 		}
 
