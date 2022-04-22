@@ -95,7 +95,7 @@ namespace CSharp_Task_24
 			s1.Clg();
 			s1.Lib(); 
 			s1.S1display();
-			Console.WriteLine("Details");
+			Console.WriteLine("\n\n");
 
 			// Student2 object
 			Student2 s2 = new Student2();
