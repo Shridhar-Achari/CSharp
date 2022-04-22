@@ -53,17 +53,63 @@ namespace CSharp_Task_25
     {
         public static void Main()
         {
-            Generics<int> gen = new Generics<int>();
-            int res = gen.Addition(5, 5);
-            Console.WriteLine("Sum is:"+res);
-            int res1 = gen.Subtraction(5, 2);
-            Console.WriteLine("Difference is:" + res1);
-            int res2 = gen.Multiplication(5, 5);
-            Console.WriteLine("Product is:" + res2);
-            Generics<double> gen1 = new Generics<double>();
-            double res3 = gen1.Division(10,3);
-            Console.WriteLine("Quotient is:" + res3);
+            string ans;
+            int n1=0, n2=0;
+            do
+            {
+                Generics<int> gen = new Generics<int>();
+                Generics<double> gen1 = new Generics<double>();
+                Console.WriteLine("\n**** Calculator ***\n");
+                Console.WriteLine("1. Addition");
+                Console.WriteLine("2. Substraction");
+                Console.WriteLine("3. Multiplication");
+                Console.WriteLine("4. Division");
+                Console.WriteLine("Enter your choice");
+                int ch = Convert.ToInt32(Console.ReadLine());
+                switch (ch)
+                {
 
+                    case 1:
+                        Console.WriteLine("\nEnter first number:");
+                        n1 = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("Enter second number:");
+                        n2 = Convert.ToInt32(Console.ReadLine());
+                        int res = gen.Addition(n1, n2);
+                        Console.WriteLine("Sum is:" + res);
+                        break;
+                    case 2:
+                        Console.WriteLine("\nEnter first number:");
+                        n1 = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("Enter second number:");
+                        n2 = Convert.ToInt32(Console.ReadLine());
+                        int res1 = gen.Subtraction(n1,n2);
+                        Console.WriteLine("Difference is:" + res1);
+                        break;
+                    case 3:
+                        Console.WriteLine("\nEnter first number:");
+                        n1 = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("Enter second number:");
+                        n2 = Convert.ToInt32(Console.ReadLine());
+                        int res2 = gen.Multiplication(n1,n2);
+                        Console.WriteLine("Product is:" + res2);
+                        break;
+                    case 4:
+                        Console.WriteLine("\nEnter first number:");
+                        n1 = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("Enter second number:");
+                        n2 = Convert.ToInt32(Console.ReadLine());
+                        double res3 = gen1.Division(n1,n2);
+                        Console.WriteLine("Quotient is:" + res3);
+                        break;
+                    default:
+                        Console.WriteLine("Invalid Choice");
+                        break;
+                }
+                Console.WriteLine("_________________________\n");
+                Console.Write("Do you want to continue(yes/no):");
+                ans = Console.ReadLine();
+            }
+            while (ans == "yes");
         }
     }  
 }
