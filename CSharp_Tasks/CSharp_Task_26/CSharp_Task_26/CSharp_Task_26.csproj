@@ -5,7 +5,7 @@
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <StartupObject>Debugging_2.TestDelegate</StartupObject>
+    <StartupObject>CSharp_Task_26.Catch1</StartupObject>
   </PropertyGroup>
 
 </Project>
