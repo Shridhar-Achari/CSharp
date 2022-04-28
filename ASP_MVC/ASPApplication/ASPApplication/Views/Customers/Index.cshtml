@@ -1,0 +1,66 @@
+﻿ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body{
+            background: #EB5757;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #000000, #EB5757);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #000000, #EB5757); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            color:white;
+            font-family:'Times New Roman', Times, serif;
+            
+        }
+    </style>
+    
+@model IEnumerable<ASPApplication.Models.Customer>
+
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index Demo</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table" style="background: #C9D6FF;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #E2E2E2, #C9D6FF);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #E2E2E2, #C9D6FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.CustName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CustAddr)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CustAge)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CustName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CustAddr)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CustAge)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.CustId" ><i class="fa-solid fa-pen-to-square"></i></a> |
+                <a asp-action="Details" asp-route-id="@item.CustId"><i class="fa fa-info-circle" aria-hidden="true"></i></a> |
+                <a asp-action="Delete" asp-route-id="@item.CustId"><i class="fa-solid fa-trash-can"></i></a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
